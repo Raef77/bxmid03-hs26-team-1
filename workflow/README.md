@@ -24,3 +24,20 @@ Ablauf der Datenübergabe von der Projektierung (BIM) in das Erhaltungsmanagemen
 ## Korrekturschleife
 
 Bei jedem Entscheid mit „Nein“ (Vollständigkeit, Plausibilität, Abnahme) wird eine BCF-Datei erstellt. Die Projektverfasser:in korrigiert die Mängel und reicht das IFC erneut ein.
+
+## Ist-Prozess (Vorher/Nachher)
+
+Offen: Der Ist-Prozess fehlt noch. Er soll zeigen, wie die Übergabe heute abläuft, und dem Soll-Prozess oben gegenübergestellt werden.
+
+| | Ist (vorher) | Soll (nachher) |
+| --- | --- | --- |
+| Ablauf der Übergabe | _TODO_ | Schritte 1 bis 12 oben |
+| Prüfung der Daten | _TODO_ | IDS-Prüfung (ifctester) und stichprobenartige Plausibilitätsprüfung |
+| Rückmeldung bei Mängeln | _TODO_ | BCF-Datei an Projektverfasser:in |
+| Übernahme ins Erhaltungssystem | _TODO_ | Export Stammdaten (CSV/Excel) und Prüfbericht, danach Übernahme (z. B. KUBA) |
+
+## Quelle und offene Punkte
+
+- Soll-Prozess: „MVP – Übergabe-Check Brücken“ (Abgabe 19.10.), siehe [Prozess MVP.pdf](Prozess%20MVP.pdf).
+- Ist-Prozess bzw. Vorher/Nachher-Vergleich ergänzen.
+- Klären, welche Rolle welche Lagerinformation braucht (siehe `requirements/`).
