@@ -6,6 +6,19 @@ Team-Repository von **Team 1** (bxmid03, HS26).
 
 Erstellen eines MVP welcher bestehende Brücken prüft und die IDS bei der Bestimmung des Zustandes helfen sollen. 
 
+## Überblick
+
+_Entwurf, vom Team zu bestätigen._
+
+| | |
+| --- | --- |
+| **Problem** | Bei der Übergabe einer Brücke aus dem BIM-Projekt ins Erhaltungsmanagement fehlen Daten oder sie lassen sich nicht prüfen. |
+| **Zielgruppe** | Erhaltungsmanagement als Empfänger der Daten, BIM-Koordination und Fachplaner als Prüfende, Auftraggeber / Bauherr für die Abnahme. |
+| **Scope** | Bauwerk und Lager der Brücke (Brückenmodell v2 mit acht Lagern). |
+| **Input** | IFC-Modell der Brücke (MAW, Modell ausgeführtes Werk) und IDS mit den Informationsanforderungen. |
+| **Verarbeitung** | IDS-Prüfung mit ifctester, Entscheid „Daten vollständig?“, stichprobenartige Plausibilitätsprüfung durch den Fachplaner. |
+| **Output** | Prüfbericht und Export der Stammdaten (CSV/Excel). Bei Mängeln eine BCF-Datei zur Korrektur. Danach Übernahme ins Erhaltungssystem (z. B. KUBA). |
+
 ## Setup
 
 Nachfolgende Programme oder Webseiten werden benötigt:
@@ -13,7 +26,7 @@ Nachfolgende Programme oder Webseiten werden benötigt:
 -  IDS Editor (z.B. https://www.idsedit.com/ oder https://www.idslight.com/)
 
 1. Repository klonen: `git clone https://github.com/Raef77/bxmid03-hs26-team-1.git`
-2. _TODO: weitere Schritte_
+2. _TODO: exakte Schritte mit Versionen (ifctester, IFC-Viewer, IDS-Editor) ergänzen, damit der Lauf wiederholbar ist_
 
 ## Ausführen
 
@@ -29,6 +42,26 @@ Kurzfassung des Ablaufs (Details in `workflow/README.md`):
 8. Erhaltungsmanagement übernimmt die Daten ins Erhaltungssystem (z. B. KUBA).
 
 Bei „Nein“ in Schritt 4, 5 oder 7 geht eine BCF-Datei an die Projektverfasser:in, die Mängel werden korrigiert und das IFC erneut eingereicht.
+
+## Projektstand
+
+Stand: Projektfeedback vom 20.10.2026.
+
+**Vorhanden**
+
+- Konkreter Nutzen: Übergabe der Brückendaten ins Erhaltungsmanagement.
+- Soll-Prozess mit IDS-Prüfung, Ja/Nein-Entscheiden und BCF-Rücklauf (Abgabe 19.10., siehe `workflow/`).
+- Brückenmodell v2 mit acht Lagern liegt bereit.
+
+**Noch offen**
+
+- Ist-Prozess bzw. Vorher/Nachher-Vergleich fehlt (`workflow/`).
+- Welche Rolle braucht welche Lagerinformation? (`requirements/`)
+- Matrix des Stahlstützen-Beispiels auf die Brücke abstimmen (`requirements/`).
+
+**Nachzuweisen**
+
+- Drei reale Datenpfade mit echten GlobalIds im Brückenmodell (`results/`).
 
 ## Struktur
 
