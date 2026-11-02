@@ -4,7 +4,8 @@ Geschützte Modelle gehören nicht ins Repository. Stattdessen wird hier beschri
 
 | Modell | Version | Quelle / Bezug | Lizenz | Hinweis |
 | --- | --- | --- | --- | --- |
-| Team_1_Bruecke_Arbeitsmodell.ifc | IFC4X3_ADD2, Export vom 19.10.2026 mit ifc-lite (laut Dateikopf) | Arbeitsmodell von Team 1, liegt im gemeinsamen Teamordner und wird lokal abgelegt | _TODO: Herkunft und Lizenz des Ausgangsmodells vom Team ergänzen_ | Brücke «BW 533» (Brücke Bergedorfer Str. / BAB 1), ca. 14,8 MB. Enthält 1 IfcBridge und 8 IfcBearing. Die Property Sets CH_Lager und CH_Bauwerksdaten sind synthetische Lehrattribute (siehe unten). |
+| Modell_Wahr | IFC4X3_ADD2, Export vom 19.10.2026 mit ifc-lite (laut Dateikopf) | Arbeitsmodell von Team 1, liegt im gemeinsamen Teamordner und wird lokal abgelegt | _TODO: Herkunft und Lizenz des Ausgangsmodells vom Team ergänzen_ | Brücke «BW 533» (Brücke Bergedorfer Str. / BAB 1), ca. 14,8 MB. Enthält 1 IfcBridge und 8 IfcBearing. Die Property Sets CH_Lager und CH_Bauwerksdaten sind synthetische Lehrattribute (siehe unten). |
+| Modell_Falsch | IFC4X3_ADD2, Export vom 19.10.2026 mit ifc-lite (laut Dateikopf) | Arbeitsmodell von Team 1, liegt im gemeinsamen Teamordner und wird lokal abgelegt | _TODO: Herkunft und Lizenz des Ausgangsmodells vom Team ergänzen_ | Brücke «BW 533» (Brücke Bergedorfer Str. / BAB 1), ca. 14,8 MB. Enthält 1 IfcBridge und 8 IfcBearing. Die Property Sets CH_Lager und CH_Bauwerksdaten sind synthetische Lehrattribute (siehe unten). |
 
 ## Inhalt des Arbeitsmodells (für die Prüfungen)
 
