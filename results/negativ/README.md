@@ -9,7 +9,7 @@ Dokumentiert einen Fall, in dem eine Prüfung fehlschlägt. Regel und Auswahl si
 | Datensatz | Lokale Testkopie des Originalmodells mit zwei bewussten Änderungen (nicht im Repository) |
 | Modell (Name, Version) | Kopie von Team_1_Bruecke_Arbeitsmodell.ifc, IFC4X3_ADD2 |
 | IDS-Datei (Name, Version) | Regeln R-01 bis R-03, IDS 1.0, unverändert gegenüber dem positiven Fall (siehe `checks/README.md`) |
-| Regel | R-02: Für IfcBearing muss CH_Lager.Lagertyp den Wert Elastomer, Topf oder Kalotte haben. R-03: Für IfcBearing muss CH_Lager.Einbaujahr vorhanden und eine ganze Zahl sein. |
+| Regel | R-02: Für IfcBearing muss CH_Lager.Lagertyp den Wert Elastomeric haben. R-03: Für IfcBearing muss CH_Lager.Einbaujahr vorhanden und eine ganze Zahl sein. |
 | Werkzeug (Name, Version) | Python 3.13, ifcopenshell 0.9.0.post1, ifctester 0.9.0, Lauf vom 27.10.2026 |
 | Regel und Auswahl in beiden Läufen unverändert? | Ja |
 
@@ -17,7 +17,7 @@ Dokumentiert einen Fall, in dem eine Prüfung fehlschlägt. Regel und Auswahl si
 
 | GlobalId | Datenpfad | Original | Veränderung |
 | --- | --- | --- | --- |
-| `1mJGo_enD7SupWwYU$8RxC` | CH_Lager.Lagertyp | Topf | auf «Rocker» gesetzt (kein erlaubter Wert) |
+| `1mJGo_enD7SupWwYU$8RxC` | CH_Lager.Einbaujahr | None | auf «None», also leer,  gesetzt (kein erlaubter Wert) |
 
 ## Ergebnis
 
@@ -25,7 +25,7 @@ Von 9 anwendbaren Objekten bestehen 7. Die 2 veränderten Lager fallen durch. Di
 
 | GlobalId | Objekt | Datenpfad | Ist-Wert | Regel | Ergebnis | Grund |
 | --- | --- | --- | --- | --- | --- | --- |
-| `1mJGo_enD7SupWwYU$8RxC` | IfcBearing | CH_Lager.Lagertyp | Gleitlager | R-02 | durchgefallen | Wert «Rocker» ist nicht erlaubt (erlaubt: Elastomer, Topf, Kalotte) |
+| `1mJGo_enD7SupWwYU$8RxC` | IfcBearing | CH_Lager.Einbaujahr | None | R-02 | durchgefallen | Wert «None» ist nicht erlaubt (erlaubt: ganze Zahl) |
 
 ## Rückmeldung
 
@@ -36,8 +36,8 @@ Der Befund geht mit GlobalId und Grund als Mängelliste an die Projektverfasser:
 Ausgabe des Skripts `pruefung.py` auf der veränderten Testkopie:
 
 ```
-R-02 und R-03 Lager: 6 von 8 bestanden
-  FEHLER 1mJGo_enD7SupWwYU$8RxC | The property value "Rocker" does not match the requirements
+R-02 Lager: 7 von 8 bestanden
+  FEHLER 1mJGo_enD7SupWwYU$8RxC | The property value "None" does not match the requirements
 R-01 Bruecke: 1 von 1 bestanden
 ```
 
