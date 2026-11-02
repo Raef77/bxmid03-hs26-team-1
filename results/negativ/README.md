@@ -6,9 +6,9 @@ Dokumentiert einen Fall, in dem eine Prüfung fehlschlägt. Regel und Auswahl si
 
 | | |
 | --- | --- |
-| Datensatz | Lokale Testkopie des Originalmodells mit zwei bewussten Änderungen (nicht im Repository) |
+| Datensatz | Lokale Testkopie des Originalmodells mit einer bewussten Änderungen |
 | Modell (Name, Version) | Modell_Falsch |
-| IDS-Datei (Name, Version) | Regeln R-01 bis R-03, IDS 1.0, unverändert gegenüber dem positiven Fall (siehe `checks/README.md`) |
+| IDS-Datei (Name, Version) | IDS_Team1, IDS 1.0, unverändert gegenüber dem positiven Fall (siehe `checks/README.md`) |
 | Regel | R-02: Für IfcBearing muss CH_Lager.Lagertyp den Wert Elastomeric haben. R-03: Für IfcBearing muss CH_Lager.Einbaujahr vorhanden und eine ganze Zahl sein. |
 | Werkzeug (Name, Version) | IFClite |
 | Regel und Auswahl in beiden Läufen unverändert? | Ja |
@@ -17,15 +17,15 @@ Dokumentiert einen Fall, in dem eine Prüfung fehlschlägt. Regel und Auswahl si
 
 | GlobalId | Datenpfad | Original | Veränderung |
 | --- | --- | --- | --- |
-| `1mJGo_enD7SupWwYU$8RxC` | CH_Lager.Lagertyp | None | auf «», also leer,  gesetzt (kein erlaubter Wert) |
+| `1mJGo_enD7SupWwYU$8RxC` | CH_Lager.Lagertyp | Elastomer | auf «», also leer,  gesetzt (kein erlaubter Wert) |
 
 ## Ergebnis
 
-Von 9 anwendbaren Objekten bestehen 7. Die 2 veränderten Lager fallen durch. Die Brücke (R-01) und die übrigen 6 Lager bestehen unverändert.
+Von 8 anwendbaren Objekten bestehen 7. Das eine veränderte Lager fällt durch. Die Brücke (R-01) und die übrigen 7 Lager bestehen unverändert.
 
 | GlobalId | Objekt | Datenpfad | Ist-Wert | Regel | Ergebnis | Grund |
 | --- | --- | --- | --- | --- | --- | --- |
-| `1mJGo_enD7SupWwYU$8RxC` | IfcBearing | CH_Lager.Lagertyp | None | R-02 | durchgefallen | Wert «», also leer, ist nicht erlaubt (erlaubt: ganze Zahl) |
+| `1mJGo_enD7SupWwYU$8RxC` | IfcBearing | CH_Lager.Lagertyp | "" | R-02 | durchgefallen | Wert «», also leer, ist nicht erlaubt (erlaubt: ganze Zahl) |
 
 ## Rückmeldung
 
