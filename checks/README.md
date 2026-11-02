@@ -52,7 +52,7 @@ def regeln_erstellen():
     lager.applicability.append(ids.Entity(name="IFCBEARING"))
     lager.requirements.append(ids.Property(
         propertySet="CH_Lager", baseName="Lagertyp", dataType="IFCLABEL", cardinality="required",
-        value=ids.Restriction(options={"enumeration": ["Elastomer", "Topf", "Kalotte"]})))
+        value=ids.Restriction(options={"enumeration": ["Elastomeric"]})))
     lager.requirements.append(ids.Property(
         propertySet="CH_Lager", baseName="Einbaujahr", dataType="IFCINTEGER", cardinality="required"))
     regeln.specifications.append(lager)
