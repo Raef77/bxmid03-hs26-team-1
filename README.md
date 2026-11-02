@@ -25,10 +25,19 @@ Nachfolgende Programme oder Webseiten werden benötigt:
 -  IFC Viewer (z.B. https://www.ifclite.com/)
 -  IDS Editor (z.B. https://www.idsedit.com/ oder https://www.idslight.com/)
 
-1. Repository klonen: `git clone https://github.com/Raef77/bxmid03-hs26-team-1.git`
-2. Python 3.13 installieren (damit getestet).
-3. Pakete installieren: `pip install ifcopenshell==0.9.0.post1 ifctester==0.9.0`
-4. Das IFC-Modell lokal ablegen. Es liegt im Teamordner und nicht im Repository (siehe `models/README.md`).
+Korrektes Modell
+1. Modell und IDS herunterladen
+2. Modell "Modell_Wahr" in "IFClite Viewer" öffnen
+3. Im Modell unter "Check" das IDS laden.
+4. Prüfung durchführen.
+5. Prüfbericht speichern und Stichproben Prüfen.
+
+Falsches Modell
+1. Modell und IDS herunterladen
+2. Modell "Modell_Falsch" in "IFClite Viewer" öffnen
+3. Im Modell unter "Check" das IDS laden.
+4. Prüfung durchführen.
+5. Fehler Prüfen und Prüfbericht speichern.
 
 ## Ausführen
 
