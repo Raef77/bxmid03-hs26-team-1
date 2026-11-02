@@ -17,7 +17,7 @@ Dokumentiert einen Fall, in dem eine Prüfung fehlschlägt. Regel und Auswahl si
 
 | GlobalId | Datenpfad | Original | Veränderung |
 | --- | --- | --- | --- |
-| `1mJGo_enD7SupWwYU$8RxC` | CH_Lager.Einbaujahr | None | auf «None», also leer,  gesetzt (kein erlaubter Wert) |
+| `1mJGo_enD7SupWwYU$8RxC` | CH_Lager.Lagertyp | None | auf «», also leer,  gesetzt (kein erlaubter Wert) |
 
 ## Ergebnis
 
@@ -25,7 +25,7 @@ Von 9 anwendbaren Objekten bestehen 7. Die 2 veränderten Lager fallen durch. Di
 
 | GlobalId | Objekt | Datenpfad | Ist-Wert | Regel | Ergebnis | Grund |
 | --- | --- | --- | --- | --- | --- | --- |
-| `1mJGo_enD7SupWwYU$8RxC` | IfcBearing | CH_Lager.Einbaujahr | None | R-02 | durchgefallen | Wert «None» ist nicht erlaubt (erlaubt: ganze Zahl) |
+| `1mJGo_enD7SupWwYU$8RxC` | IfcBearing | CH_Lager.Lagertyp | None | R-02 | durchgefallen | Wert «», also leer, ist nicht erlaubt (erlaubt: ganze Zahl) |
 
 ## Rückmeldung
 
@@ -37,7 +37,7 @@ Ausgabe des Skripts `pruefung.py` auf der veränderten Testkopie:
 
 ```
 R-02 Lager: 7 von 8 bestanden
-  FEHLER 1mJGo_enD7SupWwYU$8RxC | The property value "None" does not match the requirements
+  FEHLER 1mJGo_enD7SupWwYU$8RxC | The property value "" does not match the requirements
 R-01 Bruecke: 1 von 1 bestanden
 ```
 
