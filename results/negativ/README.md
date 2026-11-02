@@ -7,7 +7,7 @@ Dokumentiert einen Fall, in dem eine Prüfung fehlschlägt. Regel und Auswahl si
 | | |
 | --- | --- |
 | Datensatz | Lokale Testkopie des Originalmodells mit einer bewussten Änderungen |
-| Modell (Name, Version) | Modell_Falsch |
+| Modell  | Modell_Falsch |
 | IDS-Datei (Name, Version) | IDS_Team1, IDS 1.0, unverändert gegenüber dem positiven Fall (siehe `checks/README.md`) |
 | Regel | R-02: Für IfcBearing muss CH_Lager.Lagertyp den Wert Elastomeric haben. R-03: Für IfcBearing muss CH_Lager.Einbaujahr vorhanden und eine ganze Zahl sein. |
 | Werkzeug (Name, Version) | IFClite |
