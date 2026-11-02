@@ -7,10 +7,10 @@ Dokumentiert einen Fall, in dem eine Prüfung fehlschlägt. Regel und Auswahl si
 | | |
 | --- | --- |
 | Datensatz | Lokale Testkopie des Originalmodells mit zwei bewussten Änderungen (nicht im Repository) |
-| Modell (Modell_Falsch) | Kopie von Team_1_Bruecke_Arbeitsmodell.ifc, IFC4X3_ADD2 |
+| Modell (Name, Version) | Modell_Falsch |
 | IDS-Datei (Name, Version) | Regeln R-01 bis R-03, IDS 1.0, unverändert gegenüber dem positiven Fall (siehe `checks/README.md`) |
 | Regel | R-02: Für IfcBearing muss CH_Lager.Lagertyp den Wert Elastomeric haben. R-03: Für IfcBearing muss CH_Lager.Einbaujahr vorhanden und eine ganze Zahl sein. |
-| Werkzeug (Name, Version) | Python 3.13, ifcopenshell 0.9.0.post1, ifctester 0.9.0, Lauf vom 27.10.2026 |
+| Werkzeug (Name, Version) | IFClite |
 | Regel und Auswahl in beiden Läufen unverändert? | Ja |
 
 ## Was an den Daten verändert wurde
@@ -40,9 +40,3 @@ R-02 Lager: 7 von 8 bestanden
   FEHLER 1mJGo_enD7SupWwYU$8RxC | The property value "" does not match the requirements
 R-01 Bruecke: 1 von 1 bestanden
 ```
-
-_TODO: Screenshot des Prüfberichts ergänzen._
-
-## Weiterer Befund
-
-Die Hersteller-IDS vom 27.10. (Pset_ManufacturerTypeInformation) fällt nach Korrektur ihrer Applicability bei allen 8 Lagern durch, auch im Originaldatensatz. Details in `checks/README.md`.
