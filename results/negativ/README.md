@@ -17,8 +17,7 @@ Dokumentiert einen Fall, in dem eine Prüfung fehlschlägt. Regel und Auswahl si
 
 | GlobalId | Datenpfad | Original | Veränderung |
 | --- | --- | --- | --- |
-| `1mJGo_enD7SupWwYU$8ScU` | CH_Lager.Lagertyp | Topf | auf «Gleitlager» gesetzt (kein erlaubter Wert) |
-| `1mJGo_enD7SupWwYU$8R_6` | CH_Lager.Einbaujahr | 2018 | Property entfernt |
+| `1mJGo_enD7SupWwYU$8RxC` | CH_Lager.Lagertyp | Topf | auf «Rocker» gesetzt (kein erlaubter Wert) |
 
 ## Ergebnis
 
@@ -26,8 +25,7 @@ Von 9 anwendbaren Objekten bestehen 7. Die 2 veränderten Lager fallen durch. Di
 
 | GlobalId | Objekt | Datenpfad | Ist-Wert | Regel | Ergebnis | Grund |
 | --- | --- | --- | --- | --- | --- | --- |
-| `1mJGo_enD7SupWwYU$8ScU` | IfcBearing | CH_Lager.Lagertyp | Gleitlager | R-02 | durchgefallen | Wert «Gleitlager» ist nicht erlaubt (erlaubt: Elastomer, Topf, Kalotte) |
-| `1mJGo_enD7SupWwYU$8R_6` | IfcBearing | CH_Lager.Einbaujahr | fehlt | R-03 | durchgefallen | Property fehlt im Property Set CH_Lager |
+| `1mJGo_enD7SupWwYU$8RxC` | IfcBearing | CH_Lager.Lagertyp | Gleitlager | R-02 | durchgefallen | Wert «Rocker» ist nicht erlaubt (erlaubt: Elastomer, Topf, Kalotte) |
 
 ## Rückmeldung
 
@@ -39,8 +37,7 @@ Ausgabe des Skripts `pruefung.py` auf der veränderten Testkopie:
 
 ```
 R-02 und R-03 Lager: 6 von 8 bestanden
-  FEHLER 1mJGo_enD7SupWwYU$8ScU | The property value "Gleitlager" does not match the requirements
-  FEHLER 1mJGo_enD7SupWwYU$8R_6 | The property set does not contain the required property
+  FEHLER 1mJGo_enD7SupWwYU$8RxC | The property value "Rocker" does not match the requirements
 R-01 Bruecke: 1 von 1 bestanden
 ```
 
