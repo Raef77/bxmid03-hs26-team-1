@@ -7,15 +7,13 @@ Quelle: Projektwahl des Teams (Oktober 2026). Meilenstein für alle Anforderunge
 
 | ID | Anforderung | Zweck | Objekt (IFC-Klasse) | Property / Quantity | Werte | Prüfung | Wer | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| R-01 | Brücke hat ein Baujahr | Stammdaten fürs Erhaltungssystem | IfcBridge | CH_Bauwerksdaten.Baujahr | Jahr (JJJJ), integer | IDS | Modellautor ING / BIM-Koordination | IDS-Regel getestet, siehe `checks/` und `results/` |
-| R-02 | Lager haben einen Lagertyp | Erhaltungs- und Ersatzplanung | IfcBearing | CH_Lager.Lagertyp | Elastomeric | IDS + Stichprobe | Modellautor ING / BIM-Koordination | IDS-Regel getestet, Stichprobe offen |
-| R-03 | Lager haben ein Einbaujahr | Nutzungsdauer und Ersatzzeitpunkt berechnen | IfcBearing | CH_Lager.Einbaujahr | Jahr (JJJJ), integer | IDS + eigene Prüflogik (≤ aktuelles Jahr) | Modellautor ING / BIM-Koordination | IDS-Regel getestet, Prüflogik «≤ aktuelles Jahr» offen |
+| R-01 | Lager haben einen Lagertyp | Erhaltungs- und Ersatzplanung | IfcBearing | CH_Lager.Lagertyp | Elastomeric | IDS + Stichprobe | Modellautor ING / BIM-Koordination | IDS-Regel getestet, Stichprobe offen |
+| R-02 | Lager haben ein Einbaujahr | Nutzungsdauer und Ersatzzeitpunkt berechnen | IfcBearing | CH_Lager.Einbaujahr | Jahr (JJJJ), integer | IDS + eigene Prüflogik (≤ aktuelles Jahr) | Modellautor ING / BIM-Koordination | IDS-Regel getestet, Prüflogik «≤ aktuelles Jahr» offen |
 
 ## Regeln in Worten
 
-- R-01: Für IfcBridge muss CH_Bauwerksdaten.Baujahr vorhanden sein und eine ganze Zahl (Jahr, JJJJ) enthalten.
-- R-02: Für IfcBearing muss CH_Lager.Lagertyp einen Wert Elastomeric haben.
-- R-03: Für IfcBearing muss CH_Lager.Einbaujahr vorhanden sein und eine ganze Zahl (Jahr, JJJJ) enthalten. Das Jahr darf nicht in der Zukunft liegen (noch nicht automatisch geprüft).
+- R-01: Für IfcBearing muss CH_Lager.Lagertyp einen Wert Elastomeric haben.
+- R-02: Für IfcBearing muss CH_Lager.Einbaujahr vorhanden sein und eine ganze Zahl (Jahr, JJJJ) enthalten. Das Jahr darf nicht in der Zukunft liegen (noch nicht automatisch geprüft).
 
 Datenquelle: Instanz (die Property Sets liegen an den Bauteilen, nicht am Typ).
 
@@ -34,6 +32,6 @@ Abgeleitet aus Projektwahl und Workflow, vom Team zu bestätigen.
 ## Offene Punkte
 
 - Abgleich der Brückenmatrix mit der älteren Stahlstützen-Matrix durch das Team.
-- Prüflogik «Einbaujahr ≤ aktuelles Jahr» ergänzen (R-03).
-- Stichprobe für den Lagertyp definieren (R-02), siehe Plausibilitätsprüfung in `checks/`.
+- Prüflogik «Einbaujahr ≤ aktuelles Jahr» ergänzen (R-02).
+- Stichprobe für den Lagertyp definieren (R-01), siehe Plausibilitätsprüfung in `checks/`.
 - Bestätigen, welche Rolle welche Lagerinformation braucht.
