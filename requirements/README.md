@@ -8,13 +8,13 @@ Quelle: Projektwahl des Teams (Oktober 2026). Meilenstein für alle Anforderunge
 | ID | Anforderung | Zweck | Objekt (IFC-Klasse) | Property / Quantity | Werte | Prüfung | Wer | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | R-01 | Brücke hat ein Baujahr | Stammdaten fürs Erhaltungssystem | IfcBridge | CH_Bauwerksdaten.Baujahr | Jahr (JJJJ), integer | IDS | Modellautor ING / BIM-Koordination | IDS-Regel getestet, siehe `checks/` und `results/` |
-| R-02 | Lager haben einen Lagertyp | Erhaltungs- und Ersatzplanung | IfcBearing | CH_Lager.Lagertyp | Elastomer / Topf / Kalotte | IDS + Stichprobe | Modellautor ING / BIM-Koordination | IDS-Regel getestet, Stichprobe offen |
+| R-02 | Lager haben einen Lagertyp | Erhaltungs- und Ersatzplanung | IfcBearing | CH_Lager.Lagertyp | Elastomeric | IDS + Stichprobe | Modellautor ING / BIM-Koordination | IDS-Regel getestet, Stichprobe offen |
 | R-03 | Lager haben ein Einbaujahr | Nutzungsdauer und Ersatzzeitpunkt berechnen | IfcBearing | CH_Lager.Einbaujahr | Jahr (JJJJ), integer | IDS + eigene Prüflogik (≤ aktuelles Jahr) | Modellautor ING / BIM-Koordination | IDS-Regel getestet, Prüflogik «≤ aktuelles Jahr» offen |
 
 ## Regeln in Worten
 
 - R-01: Für IfcBridge muss CH_Bauwerksdaten.Baujahr vorhanden sein und eine ganze Zahl (Jahr, JJJJ) enthalten.
-- R-02: Für IfcBearing muss CH_Lager.Lagertyp einen der Werte Elastomer, Topf oder Kalotte haben.
+- R-02: Für IfcBearing muss CH_Lager.Lagertyp einen Wert Elastomeric haben.
 - R-03: Für IfcBearing muss CH_Lager.Einbaujahr vorhanden sein und eine ganze Zahl (Jahr, JJJJ) enthalten. Das Jahr darf nicht in der Zukunft liegen (noch nicht automatisch geprüft).
 
 Datenquelle: Instanz (die Property Sets liegen an den Bauteilen, nicht am Typ).
