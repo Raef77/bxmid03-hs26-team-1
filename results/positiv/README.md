@@ -7,8 +7,8 @@ Dokumentiert einen Fall, in dem die Prüfungen bestanden werden.
 | | |
 | --- | --- |
 | Datensatz | Originaldatensatz, unverändert |
-| Modell (Name, Version) | Team_1_Bruecke_Arbeitsmodell.ifc, IFC4X3_ADD2 (nicht im Repository) |
-| IDS-Datei (Name, Version) | Regeln R-01 bis R-03, IDS 1.0 (siehe `checks/README.md`) |
+| Modell | Modell_Wahr |
+| IDS-Datei (Name, Version) | IDS_Team1, IDS 1.0 (siehe `checks/README.md`) |
 | Regel | R-02: Für IfcBearing muss CH_Lager.Lagertyp den Wert Elastomeric haben. R-03: Für IfcBearing muss CH_Lager.Einbaujahr vorhanden und eine ganze Zahl sein. R-01: Für IfcBridge muss CH_Bauwerksdaten.Baujahr vorhanden und eine ganze Zahl sein. |
 | Werkzeug (Name, Version) | Python 3.13, ifcopenshell 0.9.0.post1, ifctester 0.9.0, Lauf vom 27.10.2026 |
 
