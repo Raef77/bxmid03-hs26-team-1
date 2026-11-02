@@ -7,7 +7,7 @@ Dokumentiert einen Fall, in dem eine Prüfung fehlschlägt. Regel und Auswahl si
 | | |
 | --- | --- |
 | Datensatz | Lokale Testkopie des Originalmodells mit zwei bewussten Änderungen (nicht im Repository) |
-| Modell (Name, Version) | Kopie von Team_1_Bruecke_Arbeitsmodell.ifc, IFC4X3_ADD2 |
+| Modell (Modell_Falsch) | Kopie von Team_1_Bruecke_Arbeitsmodell.ifc, IFC4X3_ADD2 |
 | IDS-Datei (Name, Version) | Regeln R-01 bis R-03, IDS 1.0, unverändert gegenüber dem positiven Fall (siehe `checks/README.md`) |
 | Regel | R-02: Für IfcBearing muss CH_Lager.Lagertyp den Wert Elastomeric haben. R-03: Für IfcBearing muss CH_Lager.Einbaujahr vorhanden und eine ganze Zahl sein. |
 | Werkzeug (Name, Version) | Python 3.13, ifcopenshell 0.9.0.post1, ifctester 0.9.0, Lauf vom 27.10.2026 |
