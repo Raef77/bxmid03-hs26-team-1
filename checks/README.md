@@ -25,9 +25,8 @@ Die Ergebnisse mit GlobalIds werden in results/ abgelegt.
 
 ## Prüflogik
 
-- Baujahr: Angabe muss vorhanden sein.
+- Einaujahr: Angabe muss vorhanden sein.
 - Lagertyp: Angabe muss vorhanden sein.
-- Einbaujahr: Angabe muss vorhanden sein. Ein Datum in der Vergangenheit ist kein Fehler (Schulprojekt). Ein Fehler liegt nur vor, wenn kein Datum angegeben ist.
 
 ## Testfälle
 
@@ -37,4 +36,3 @@ Die Ergebnisse mit GlobalIds werden in results/ abgelegt.
 ## Offen
 
 - Stichprobe zur Plausibilität des Lagertyps durch den Fachplaner.
-- Entscheid, welche IDS-Regel leitend ist: CH_Lager oder Hersteller-Properties.
