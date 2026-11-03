@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
+  <ids:info>
+    <ids:title>Team 1 · Übergabe Brücke ins Erhaltungsmanagement: Elastomerlager</ids:title>
+    <ids:copyright>BFH BXMid03 HS26, Team 1</ids:copyright>
+    <ids:version>1.0</ids:version>
+    <ids:description>Prüft die Lagerdaten der Elastomerlager (IfcBearing, PredefinedType ELASTOMERIC) und das Baujahr der Brücke vor der Übernahme ins Erhaltungssystem (z. B. KUBA). Meilenstein: Ende Phase 53 (Übergabe, Modell ausgeführtes Werk).</ids:description>
+    <ids:date>2026-11-03</ids:date>
+    <ids:purpose>Datenübergabe Projektierung → Erhaltungsmanagement</ids:purpose>
+    <ids:milestone>Ende Phase 53</ids:milestone>
+  </ids:info>
+  <ids:specifications>
+    <ids:specification name="R-01/R-02 Elastomerlager: Lagertyp und Einbaujahr" ifcVersion="IFC4X3_ADD2" identifier="R-01_R-02" description="Jedes Elastomerlager hat einen Lagertyp, der zur Lagerart passt, und ein plausibles Einbaujahr." instructions="Lieferant: Projektverfasser:in (Modellautor ING). Prüfung: BIM-Koordination. Empfänger: Erhaltungsmanagement.">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCBEARING</ids:simpleValue>
+          </ids:name>
+          <ids:predefinedType>
+            <ids:simpleValue>ELASTOMERIC</ids:simpleValue>
+          </ids:predefinedType>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:property dataType="IFCLABEL" cardinality="required" instructions="R-01: Lagertyp muss zur Lagerart (PredefinedType ELASTOMERIC) passen. Erlaubt ist nur «Elastomer» (Begriff nach ASB-ING). «Topf» oder «Kalotte» an einem Elastomerlager ist ein Widerspruch.">
+          <ids:propertySet>
+            <ids:simpleValue>CH_Lager</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Lagertyp</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <ids:simpleValue>Elastomer</ids:simpleValue>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCINTEGER" cardinality="required" instructions="R-02: Einbaujahr als ganze Zahl (JJJJ), zwischen 1950 und 2026 (nicht in der Zukunft). Grundlage für Nutzungsdauer und Ersatzzeitpunkt.">
+          <ids:propertySet>
+            <ids:simpleValue>CH_Lager</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Einbaujahr</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="1950"/>
+              <xs:maxInclusive value="2026"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+      </ids:requirements>
+    </ids:specification>
+    <ids:specification name="R-03 Brücke: Baujahr" ifcVersion="IFC4X3_ADD2" identifier="R-03" description="Die Brücke hat ein Baujahr." instructions="Lieferant: Projektverfasser:in. Empfänger: Erhaltungsmanagement (Stammdaten).">
+      <ids:applicability minOccurs="1" maxOccurs="1">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCBRIDGE</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:property dataType="IFCINTEGER" cardinality="required" instructions="R-03: Baujahr als ganze Zahl (JJJJ), zwischen 1850 und 2026.">
+          <ids:propertySet>
+            <ids:simpleValue>CH_Bauwerksdaten</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Baujahr</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="1850"/>
+              <xs:maxInclusive value="2026"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+      </ids:requirements>
+    </ids:specification>
+  </ids:specifications>
+</ids:ids>
