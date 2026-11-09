@@ -10,10 +10,10 @@ Zusätzlich zu prüfen: das Attribut **`Name`** (lesbar und eindeutig, z. B. `Fl
 
 | Kategorie | Properties in `BFH_Minor` | Datentyp (für IDS `dataType`) |
 |---|---|---|
-| Beton | `NPK_Typ`, `Bewehrungsstahl`, `Ueberdeckung` [mm], `Einbaujahr` | IfcLabel, IfcLabel, IfcInteger, IfcInteger |
-| Belag | `Schichtstaerke` [mm], `Sorte`, `Einbaujahr` | IfcInteger, IfcLabel, IfcInteger |
-| Stahl | `Stahlqualitaet`, `Korrosionsschutz`, `Profil`, `Einbaujahr` | IfcLabel, IfcLabel, IfcLabel, IfcInteger |
-| Lager | `Lagertyp`, `Lieferant`, `Modell`, `Einbaujahr` | IfcLabel, IfcLabel, IfcLabel, IfcInteger |
+| Beton | `NPK_Typ`, `Bewehrungsstahl`, `Ueberdeckung` [mm], `Einbaujahr` | IFCLABEL, IFCLABEL, IFCINTEGER, IFCINTEGER |
+| Belag | `Schichtstaerke` [mm], `Sorte`, `Einbaujahr` | IFCINTEGER, IFCLABEL, IFCINTEGER |
+| Stahl | `Stahlqualitaet`, `Korrosionsschutz`, `Profil`, `Einbaujahr` | IFCLABEL, IFCLABEL, IFCLABEL, IFCINTEGER |
+| Lager | `Lagertyp`, `Lieferant`, `Modell`, `Einbaujahr` | IFCLABEL, IFCLABEL, IFCLABEL, IFCINTEGER |
 
 Property-Namen ohne Umlaute (ae/oe/ue), damit sie sich in IDS-Regeln einfach schreiben lassen.
 
