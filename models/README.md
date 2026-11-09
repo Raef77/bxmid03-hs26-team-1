@@ -8,7 +8,7 @@ Das bereinigte Lehrmodell `Team_1_Bruecke_BFH_Minor.ifc` (vom Dozenten bereitges
 | --- | --- | --- | --- | --- |
 | Modell_Wahr | IFC4X3_ADD2, Export vom 19.10.2026 mit ifc-lite (laut Dateikopf) | Arbeitsmodell von Team 1, liegt im gemeinsamen Teamordner und wird lokal abgelegt | IFC-Lite-Testkorpus (ifcbridge-model01), nach IFC4X3 migriert; Lager- und Baujahrdaten sind synthetische Lehrdaten | Brücke «BW 533» (Brücke Bergedorfer Str. / BAB 1), ca. 14,8 MB. Enthält 1 IfcBridge und 8 IfcBearing. Die Property Sets CH_Lager und CH_Bauwerksdaten sind synthetische Lehrattribute (siehe unten). |
 | Modell_Falsch | IFC4X3_ADD2, Export vom 19.10.2026 mit ifc-lite (laut Dateikopf) | Arbeitsmodell von Team 1, liegt im gemeinsamen Teamordner und wird lokal abgelegt | IFC-Lite-Testkorpus (ifcbridge-model01), nach IFC4X3 migriert; Lager- und Baujahrdaten sind synthetische Lehrdaten | Brücke «BW 533» (Brücke Bergedorfer Str. / BAB 1), ca. 14,8 MB. Enthält 1 IfcBridge und 8 IfcBearing. Die Property Sets CH_Lager und CH_Bauwerksdaten sind synthetische Lehrattribute (siehe unten). |
-| Team_1_Bruecke_BFH_Minor.ifc | IFC4X3_ADD2, bereinigt am 9.11.2026 | In diesem Ordner | wie Modell_Wahr; alle Werte in BFH_Minor sind fiktive Lehrdaten | Bereinigte Kopie von Modell_Wahr, gleiche Geometrie und GlobalIds, ohne zwei entfernte Hilfsobjekte. 163 Bauteile mit je einem Pset BFH_Minor. |
+| Team_1_Bruecke_BFH_Minor.ifc | IFC4X3_ADD2, bereinigt am 9.11.2026 | In diesem Ordner | wie Modell_Wahr; alle Werte in BFH_Minor sind fiktive Lehrdaten | Bereinigte Kopie von Modell_Wahr, gleiche Geometrie und GlobalIds, ohne zwei Hilfsobjekte. 163 Bauteile mit je einem Pset BFH_Minor. |
 
 ## Inhalt des Arbeitsmodells (Modell_Wahr / Modell_Falsch)
 
