@@ -1,6 +1,6 @@
 # Elementplan Team 1 Brücke
 
-Modell: `Team_1_Bruecke_BFH_Minor.ifc` (bereinigte Kopie von `Team_1_Bruecke_Arbeitsmodell.ifc`, Stand 9.11.2026)
+Modell: `Team_1_Bruecke_BFH_Minor.ifc` (bereinigte Kopie von `Team_1_Bruecke_Arbeitsmodell.ifc`, bei euch Modell_Wahr, Stand 9.11.2026)
 
 Alle 163 Bauteile haben genau ein Property Set **`BFH_Minor`**. Pro Kategorie gibt es 2–3 Properties plus `Einbaujahr`. Die Werte sind fiktiv, aber plausibel. Zahlen stehen ohne Einheit im Modell, die Einheit steht im Tabellenkopf.
 
@@ -77,4 +77,4 @@ Die Lagerdaten stehen neu in `BFH_Minor` statt in `CH_Lager`. In [`requirements/
 - Sauberkeitsschicht und Magerbeton sind unbewehrt: `Ueberdeckung` = 0 heisst «nicht anwendbar». Regeln wie «Ueberdeckung ≥ 20» müssen diese Bauteile ausnehmen.
 - Von den Bauteilen entfernt: alle bisherigen Psets (`ASB-ING_2013`, `sonstige Attribute`, `Hyperlinks`, `Pset_BuildingElementProxyCommon`, `Pset_ManufacturerTypeInformation`, `Pset_RailingCommon`, `CH_Lager`, `CH_Lehre`) sowie zwei Hilfsobjekte ohne Bauteilcharakter (Projektnullpunkt, 3D-Jahreszahl). Deren ungenutzte Geometrie-, Material- und Layer-Reste sind noch im File.
 - Unverändert (bis auf die Einträge der entfernten Hilfsobjekte): Geometrie, GlobalIds, IFC-Klassen, die Psets an IfcBridge und IfcBridgePart, Material- und Klassifikationszuordnungen, `ObjectType` und die Typobjekte (Revit-Bezeichnungen, alle IfcBuildingElementProxyType).
-- Wie im Original: Alle Lager haben den PredefinedType ELASTOMERIC, 5 davon sind aber Topf- oder Kalottenlager (absichtlicher Prüffall, eure Regel R-01 findet genau diese 5). Kopfplatten sind teils IfcPlate, teils IfcBuildingElementProxy.
+- Wie im Original: Alle Lager haben den PredefinedType ELASTOMERIC, 5 davon sind aber Topf- oder Kalottenlager (absichtlicher Prüffall, eure Regel R-01 findet nach der Umstellung oben genau diese 5). Kopfplatten sind teils IfcPlate, teils IfcBuildingElementProxy.

@@ -8,8 +8,11 @@ Das bereinigte Lehrmodell `Team_1_Bruecke_BFH_Minor.ifc` (vom Dozenten bereitges
 | --- | --- | --- | --- | --- |
 | Modell_Wahr | IFC4X3_ADD2, Export vom 19.10.2026 mit ifc-lite (laut Dateikopf) | Arbeitsmodell von Team 1, liegt im gemeinsamen Teamordner und wird lokal abgelegt | IFC-Lite-Testkorpus (ifcbridge-model01), nach IFC4X3 migriert; Lager- und Baujahrdaten sind synthetische Lehrdaten | Brücke «BW 533» (Brücke Bergedorfer Str. / BAB 1), ca. 14,8 MB. Enthält 1 IfcBridge und 8 IfcBearing. Die Property Sets CH_Lager und CH_Bauwerksdaten sind synthetische Lehrattribute (siehe unten). |
 | Modell_Falsch | IFC4X3_ADD2, Export vom 19.10.2026 mit ifc-lite (laut Dateikopf) | Arbeitsmodell von Team 1, liegt im gemeinsamen Teamordner und wird lokal abgelegt | IFC-Lite-Testkorpus (ifcbridge-model01), nach IFC4X3 migriert; Lager- und Baujahrdaten sind synthetische Lehrdaten | Brücke «BW 533» (Brücke Bergedorfer Str. / BAB 1), ca. 14,8 MB. Enthält 1 IfcBridge und 8 IfcBearing. Die Property Sets CH_Lager und CH_Bauwerksdaten sind synthetische Lehrattribute (siehe unten). |
+| Team_1_Bruecke_BFH_Minor.ifc | IFC4X3_ADD2, bereinigt am 9.11.2026 | Liegt in diesem Ordner (vom Dozenten bereitgestellt) | wie Modell_Wahr; alle Werte in BFH_Minor sind fiktive Lehrdaten | Bereinigte Kopie von Modell_Wahr, gleiche Geometrie und GlobalIds. 163 Bauteile mit je einem Pset BFH_Minor, Lagerdaten dort statt in CH_Lager. Details: [Team_1_Elementplan.md](Team_1_Elementplan.md). |
 
-## Inhalt des Arbeitsmodells (für die Prüfungen)
+## Inhalt des Arbeitsmodells (Modell_Wahr / Modell_Falsch)
+
+Im bereinigten Lehrmodell stehen die Lagerdaten in BFH_Minor statt in CH_Lager, CH_Lehre gibt es dort nicht mehr (siehe Elementplan).
 
 | Objekt | Anzahl | Property Set | Properties |
 | --- | --- | --- | --- |
@@ -20,6 +23,6 @@ Im Modell sind die ergänzten Werte über das Property Set CH_Lehre gekennzeichn
 
 ## Hinweise
 
-- Keine Modelldateien oder Zugangsdaten committen.
+- Keine weiteren Modelldateien oder Zugangsdaten committen (das Lehrmodell oben ist die einzige Ausnahme).
 - Das Modell lokal ablegen und den Pfad beim Aufruf des Prüfskripts angeben (siehe `checks/README.md`).
 - Veränderte Testkopien des Modells (zum Beispiel für den negativen Fall) ebenfalls nur lokal halten. Die Änderungen werden in `results/negativ/README.md` beschrieben.
