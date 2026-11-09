@@ -2,7 +2,7 @@
 
 Geschützte Modelle gehören nicht ins Repository. Stattdessen wird hier beschrieben, welche Modelle verwendet werden und wie man sie bezieht.
 
-Ausnahme: Das bereinigte Lehrmodell `Team_1_Bruecke_BFH_Minor.ifc` (vom Dozenten bereitgestellt, 9.11.2026) liegt hier im Ordner. Welche Bauteile und Properties es enthält, steht in [`Team_1_Elementplan.md`](Team_1_Elementplan.md).
+Das bereinigte Lehrmodell `Team_1_Bruecke_BFH_Minor.ifc` (vom Dozenten bereitgestellt, 9.11.2026) ist nicht geschützt und liegt deshalb hier. Bauteile und Properties: [`Team_1_Elementplan.md`](Team_1_Elementplan.md).
 
 | Modell | Version | Quelle / Bezug | Lizenz | Hinweis |
 | --- | --- | --- | --- | --- |
