@@ -1,0 +1,66 @@
+# checks/pruefregeln.yaml
+# Quelle der Wahrheit für die Zusatzprüfungen, die Stichprobe und die Dashboard-Gruppen des Colab-Notebooks.
+# Die IDS-Regeln selbst stehen in requirements/Team1_Lager_Elastomer.ids (hat im Notebook Vorrang).
+# Die Spezifikationen unten sind der Fallback, falls keine .ids-Datei angegeben wird. Inhalt wie die IDS (Pset BFH_Minor).
+titel: Team 1 Übergabe Brücke ins Erhaltungsmanagement
+ifcVersion: IFC4X3_ADD2
+
+# Platzhalter in Werten: aktuelles_jahr (wird beim Lauf durch das Jahr ersetzt)
+spezifikationen:
+  - id: R-01
+    name: Elastomerlager - Lagertyp passt zur Lagerart
+    klasse: IFCBEARING
+    anforderungen:
+      - pset: BFH_Minor
+        name: Lagertyp
+        datentyp: IFCLABEL
+        erlaubte_werte: [Elastomer]
+  - id: R-02
+    name: Elastomerlager - Einbaujahr (ganze Zahl, nicht in der Zukunft)
+    klasse: IFCBEARING
+    anforderungen:
+      - pset: BFH_Minor
+        name: Einbaujahr
+        datentyp: IFCINTEGER
+        min: 1950
+        max: aktuelles_jahr
+  - id: R-03
+    name: Brücke - Baujahr
+    klasse: IFCBRIDGE
+    anforderungen:
+      - pset: CH_Bauwerksdaten
+        name: Baujahr
+        datentyp: IFCINTEGER
+        min: 1850
+        max: aktuelles_jahr
+
+# Prüfungen, die IDS nicht abbildet (erscheinen im Bericht und in der Mängelliste, nicht im BCF)
+zusatzpruefungen:
+  - id: Z-01
+    name: Name des Bauteils ist vorhanden und eindeutig
+    typ: name_eindeutig
+    klassen: [IfcBearing]
+    schweregrad: Fehler
+  - id: Z-02
+    name: Einbaujahr liegt nicht vor dem Baujahr der Brücke
+    typ: einbaujahr_nach_baujahr
+    klassen: [IfcBearing]
+    einbaujahr: BFH_Minor.Einbaujahr
+    baujahr: CH_Bauwerksdaten.Baujahr
+    schweregrad: Warnung
+
+# Stichprobe für den Fachplaner (Beurteilung bleibt manuell)
+stichprobe:
+  klassen: [IfcBearing]
+  anzahl: 3
+  seed: 1
+  felder: [Name, BFH_Minor.Lagertyp, BFH_Minor.Lieferant, BFH_Minor.Modell, BFH_Minor.Einbaujahr]
+
+# Dashboard "Vollständigkeit in % je Bauteilgruppe"
+gruppen:
+  - name: Bauwerk
+    klassen: [IfcBridge]
+    erforderlich: [CH_Bauwerksdaten.Baujahr]
+  - name: Lager
+    klassen: [IfcBearing]
+    erforderlich: [BFH_Minor.Lagertyp, BFH_Minor.Einbaujahr]
