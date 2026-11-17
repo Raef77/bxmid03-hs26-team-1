@@ -1,0 +1,20 @@
+# checks/export_mapping.yaml
+# Stammdaten-Export für das Erhaltungssystem (z. B. KUBA). Eine Tabelle pro Blatt.
+# quelle: GlobalId | Name | Klasse | <Pset>.<Property>
+# Stand: Entwurf, Spalten vom Team zu bestätigen.
+tabellen:
+  - blatt: Bauwerk
+    klassen: [IfcBridge]
+    spalten:
+      - {spalte: GlobalId, quelle: GlobalId}
+      - {spalte: Bauwerksname, quelle: Name}
+      - {spalte: Baujahr, quelle: CH_Bauwerksdaten.Baujahr}
+  - blatt: Lager
+    klassen: [IfcBearing]
+    spalten:
+      - {spalte: GlobalId, quelle: GlobalId}
+      - {spalte: Name, quelle: Name}
+      - {spalte: Lagertyp, quelle: BFH_Minor.Lagertyp}
+      - {spalte: Lieferant, quelle: BFH_Minor.Lieferant}
+      - {spalte: Modell, quelle: BFH_Minor.Modell}
+      - {spalte: Einbaujahr, quelle: BFH_Minor.Einbaujahr}
