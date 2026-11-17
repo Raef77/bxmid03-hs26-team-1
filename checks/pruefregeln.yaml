@@ -1,38 +1,44 @@
 # checks/pruefregeln.yaml
 # Quelle der Wahrheit für die Zusatzprüfungen, die Stichprobe und die Dashboard-Gruppen des Colab-Notebooks.
-# Die IDS-Regeln selbst stehen in requirements/Team1_Lager_Elastomer.ids (hat im Notebook Vorrang).
-# Die Spezifikationen unten sind der Fallback, falls keine .ids-Datei angegeben wird. Inhalt wie die IDS (Pset BFH_Minor).
+# Die IDS-Regeln selbst stehen in requirements/Team1_Lager_Elastomer.ids (hat im Notebook Vorrang, Feld IDS_DATEI).
+# Die Spezifikationen unten sind der Fallback, falls keine .ids-Datei angegeben wird. Inhalt wie die IDS (Stand 17.11.2026).
 titel: Team 1 Übergabe Brücke ins Erhaltungsmanagement
 ifcVersion: IFC4X3_ADD2
 
 # Platzhalter in Werten: aktuelles_jahr (wird beim Lauf durch das Jahr ersetzt)
 spezifikationen:
-  - id: R-01
-    name: Elastomerlager - Lagertyp passt zur Lagerart
+  - id: R-01_R-02
+    name: Elastomerlager - Lagertyp, Einbaujahr, Lieferant, Modell
     klasse: IFCBEARING
+    predefinedType: ELASTOMERIC
     anforderungen:
-      - pset: BFH_Minor
-        name: Lagertyp
-        datentyp: IFCLABEL
-        erlaubte_werte: [Elastomer]
-  - id: R-02
-    name: Elastomerlager - Einbaujahr (ganze Zahl, nicht in der Zukunft)
-    klasse: IFCBEARING
-    anforderungen:
-      - pset: BFH_Minor
-        name: Einbaujahr
-        datentyp: IFCINTEGER
-        min: 1950
-        max: aktuelles_jahr
+      - {pset: BFH_Minor, name: Lagertyp, datentyp: IFCLABEL, erlaubte_werte: [Elastomer]}
+      - {pset: BFH_Minor, name: Einbaujahr, datentyp: IFCINTEGER, min: 1950, max: aktuelles_jahr}
+      - {pset: BFH_Minor, name: Lieferant, datentyp: IFCLABEL}
+      - {pset: BFH_Minor, name: Modell, datentyp: IFCLABEL}
   - id: R-03
     name: Brücke - Baujahr
     klasse: IFCBRIDGE
     anforderungen:
-      - pset: CH_Bauwerksdaten
-        name: Baujahr
-        datentyp: IFCINTEGER
-        min: 1850
-        max: aktuelles_jahr
+      - {pset: CH_Bauwerksdaten, name: Baujahr, datentyp: IFCINTEGER, min: 1850, max: aktuelles_jahr}
+  - id: R-01_R-02
+    name: Topflager - Lagertyp, Einbaujahr, Lieferant, Modell
+    klasse: IFCBEARING
+    predefinedType: POT
+    anforderungen:
+      - {pset: BFH_Minor, name: Lagertyp, datentyp: IFCLABEL, erlaubte_werte: [Topf]}
+      - {pset: BFH_Minor, name: Einbaujahr, datentyp: IFCINTEGER, min: 1950, max: aktuelles_jahr}
+      - {pset: BFH_Minor, name: Lieferant, datentyp: IFCLABEL}
+      - {pset: BFH_Minor, name: Modell, datentyp: IFCLABEL}
+  - id: R-01_R-02
+    name: Kalottenlager - Lagertyp, Einbaujahr, Lieferant, Modell
+    klasse: IFCBEARING
+    predefinedType: SPHERICAL
+    anforderungen:
+      - {pset: BFH_Minor, name: Lagertyp, datentyp: IFCLABEL, erlaubte_werte: [Kalotte]}
+      - {pset: BFH_Minor, name: Einbaujahr, datentyp: IFCINTEGER, min: 1950, max: aktuelles_jahr}
+      - {pset: BFH_Minor, name: Lieferant, datentyp: IFCLABEL}
+      - {pset: BFH_Minor, name: Modell, datentyp: IFCLABEL}
 
 # Prüfungen, die IDS nicht abbildet (erscheinen im Bericht und in der Mängelliste, nicht im BCF)
 zusatzpruefungen:
@@ -63,4 +69,4 @@ gruppen:
     erforderlich: [CH_Bauwerksdaten.Baujahr]
   - name: Lager
     klassen: [IfcBearing]
-    erforderlich: [BFH_Minor.Lagertyp, BFH_Minor.Einbaujahr]
+    erforderlich: [BFH_Minor.Lagertyp, BFH_Minor.Einbaujahr, BFH_Minor.Lieferant, BFH_Minor.Modell]
