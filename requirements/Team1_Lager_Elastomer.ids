@@ -24,7 +24,7 @@
       <ids:requirements>
         <ids:property dataType="IFCLABEL" cardinality="required" instructions="R-01: Lagertyp muss zur Lagerart (PredefinedType ELASTOMERIC) passen. Erlaubt ist nur «Elastomer» (Begriff nach ASB-ING). «Topf» oder «Kalotte» an einem Elastomerlager ist ein Widerspruch.">
           <ids:propertySet>
-            <ids:simpleValue>CH_Lager</ids:simpleValue>
+            <ids:simpleValue>BFH_Minor</ids:simpleValue>
           </ids:propertySet>
           <ids:baseName>
             <ids:simpleValue>Lagertyp</ids:simpleValue>
@@ -35,7 +35,7 @@
         </ids:property>
         <ids:property dataType="IFCINTEGER" cardinality="required" instructions="R-02: Einbaujahr als ganze Zahl (JJJJ), zwischen 1950 und 2026 (nicht in der Zukunft). Grundlage für Nutzungsdauer und Ersatzzeitpunkt.">
           <ids:propertySet>
-            <ids:simpleValue>CH_Lager</ids:simpleValue>
+            <ids:simpleValue>BFH_Minor</ids:simpleValue>
           </ids:propertySet>
           <ids:baseName>
             <ids:simpleValue>Einbaujahr</ids:simpleValue>
