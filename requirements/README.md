@@ -9,6 +9,8 @@ Quelle: Projektwahl des Teams (Oktober 2026). Meilenstein für alle Anforderunge
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | R-01 | Lager haben einen Lagertyp | Erhaltungs- und Ersatzplanung | IfcBearing | BFH_Minor.Lagertyp | Elastomeric | IDS + Stichprobe | Modellautor ING / BIM-Koordination |
 | R-02 | Lager haben ein Einbaujahr | Nutzungsdauer und Ersatzzeitpunkt berechnen | IfcBearing | BFH_Minor.Einbaujahr | Jahr (JJJJ), integer | IDS + eigene Prüflogik (≤ aktuelles Jahr) | Modellautor ING / BIM-Koordination |
+| R-03 | Lager haben ein Einbaujahr | Nutzungsdauer und Ersatzzeitpunkt berechnen | IfcBearing | BFH_Minor.Einbaujahr | Jahr (JJJJ), integer | IDS + eigene Prüflogik (≤ aktuelles Jahr) | Modellautor ING / BIM-Koordination |
+
 
 ## Regeln in Worten
 
